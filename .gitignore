@@ -9,3 +9,4 @@ appsettings.Production.json
 Secrets/
 .env
 coverage/
+publish/
