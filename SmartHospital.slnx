@@ -1,0 +1,7 @@
+<Solution>
+  <Project Path="SmartHospital.Api/SmartHospital.Api.csproj" />
+  <Project Path="SmartHospital.Application/SmartHospital.Application.csproj" />
+  <Project Path="SmartHospital.Domain/SmartHospital.Domain.csproj" />
+  <Project Path="SmartHospital.Infrastructure/SmartHospital.Infrastructure.csproj" />
+  <Project Path="SmartHospital.Tests/SmartHospital.Tests.csproj" />
+</Solution>

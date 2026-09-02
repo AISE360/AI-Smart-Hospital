@@ -1,0 +1,11 @@
+bin/
+obj/
+dist/
+dist-electron/
+release/
+node_modules/
+*.log
+appsettings.Production.json
+Secrets/
+.env
+coverage/

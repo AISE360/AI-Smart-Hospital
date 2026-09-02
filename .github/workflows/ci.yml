@@ -1,0 +1,22 @@
+name: CI
+on: [push, pull_request]
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with: { dotnet-version: '8.0.x' }
+      - run: dotnet build SmartHospital.slnx
+      - run: DOTNET_ROLL_FORWARD=Major dotnet test SmartHospital.Tests/SmartHospital.Tests.csproj
+      - run: dotnet publish SmartHospital.Api/SmartHospital.Api.csproj -c Release
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: '20' }
+      - run: npm ci
+        working-directory: electron-app
+      - run: npm run build
+        working-directory: electron-app

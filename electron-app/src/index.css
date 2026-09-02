@@ -1,0 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Clinical low-clutter theme */
+:root { color-scheme: light; }
+body { @apply bg-slate-50 text-slate-800 font-sans antialiased; }
